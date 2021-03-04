@@ -53,7 +53,7 @@ const avengers = {
 };
 
 // 4b
-const {captainAmerica: captainAmerica, theHulk: theHulk} = avengers;
+const {captainAmerica, theHulk} = avengers;
 
 // 4c
 console.log(captainAmerica, theHulk);
@@ -79,8 +79,16 @@ const bonus = {
 };
 
 // 5a
-const {first: all, second: all} = bonus;
+const all = [
+    ...bonus.first,
+    ...bonus.second,
+    ...bonus.third
+];
 
 console.log(all);
 
 // 5b
+const [one,two,three] = bonus.first;
+const [four, five, six] = bonus.second;
+const [seven, eight, nine] = bonus.third;
+console.log(one, two, three, four, five, six, seven, eight, nine);
